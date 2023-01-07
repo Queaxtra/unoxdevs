@@ -1,0 +1,54 @@
+---
+import "../styles/style.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+let skills = [
+    "Node.js",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Svelte",
+    "Astro",
+    "TailwindCSS",
+    "SASS",
+    "BulmaCSS",
+    "Alpinejs",
+    "Bootstrap",
+    "MongoDB",
+    "React",
+    "Go",
+    "Dart"
+]
+---
+<Navbar />
+
+<section class="w-auto h-52 md:h-60 bg-gray-100/75">
+    <h2 class="relative top-10 text-2xl text-center md:text-4xl md:top-10 transform transition-all">UnoxDevs</h2>
+    <p class="relative text-md top-12 text-center md:text-md md:top-12 transform transition-all">Think simple, live simple.</p>
+    <div class="flex justify-center">
+        <a href="mailto:contact@unoxdevs.cf" class="relative top-14 md:top-16 inline-block rounded border px-8 py-2 text-sm font-medium bg-gray-900 text-white transform transition-all">
+        <i class="fa-sharp fa-solid fa-envelope"></i> Contact
+        </a>
+        <a href="mailto:contact@unoxdevs.cf" class="relative top-14 md:top-16 inline-block rounded border px-8 py-2 text-sm font-medium bg-[#333] text-white transform transition-all">
+            <i class="fa-brands fa-github"></i> Github
+        </a>
+    </div>
+</section>
+
+<div>
+    <h2 class="relative ml-5 text-xl md:ml-20 lg:ml-40 top-10 transform transition-all md:text-3xl font-bold">About</h2>
+    <div class="transform transition-all relative border-l-4 border-gray-900 ml-5 md:ml-20 lg:ml-40 top-14 rounded w-80 md:w-[40rem] h-48 md:h-28 bg-gray-100/75">
+        <p class="relative top-3 md:top-2 text-gray-800 text-md p-3 md:p-2">UnoxDevs is a small team of developers trying to make the world a better place by making open source projects. This team of 3 people shares their projects on <a href="https://github.com/unoxdevs" class="font-bold">Github</a> accounts.</p>
+    </div>
+
+    <h2 class="relative md:float-right ml-5 text-xl md:mr-20 lg:mr-40 top-24 md:top-20 lg:top-14 transform transition-all md:text-3xl font-bold">Skills</h2>
+    <div class="transform md:float-right transition-all relative border-l-4 md:border-r-4 lg:border-r-4 lg:border-l-0 md:border-l-0 border-gray-900 ml-5 md:-mr-24 top-28 md:top-32 lg:top-28 rounded w-80 md:w-[40rem] p-1 bg-gray-100/75">
+        <p class="relative top-3 md:top-2 text-gray-800 text-md p-3 md:p-2">
+            {skills.map((skill) => (
+                <span class="relative -top-1 inline-block bg-gray-800 text-white rounded px-3 py-1 text-sm mr-1 mb-2">{skill}</span>
+            ))}
+        </p>
+    </div>
+</div>
+
+<Footer />
